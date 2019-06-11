@@ -8,11 +8,10 @@ username = input('Enter a username ')
 name=username.isalpha()
 
 if name:
+   password = "hello"+username
+   encryptpwd = crypt.crypt(password,"22")  
+   os.system("useradd -p "+encryptpwd+" "+username)
    print('User has been created')
-   password = 'hello'+ username
-   encryptpwd = crypt.crypt(password,'*')  
-   os.system('useradd -p'+ str(encryptpwd)+' '+ username)
-   
 
 else :
     print('User cannot be created')   
