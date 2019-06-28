@@ -13,5 +13,5 @@ for each_search in search(web,tld='com',lang='en',num=3,start=0,stop=3,pause=1):
 	#create a png file 
 	q.png("qr{}.png".format(num),scale=8)
 	#to transfer the qrcode at /var/www/html
-	os.system("scp -i /home/kritika/Desktop/linuxredhat.pem qr"+str(num)+".png ec2-user@13.126.58.129:/var/www/html/")
+	os.system("scp -i /home/kritika/Desktop/linuxredhat.pem qr"+str(num)+".png ec2-user@<ip>:/var/www/html/") # add your ip address at <ip>
 	num = num+1
